@@ -1,17 +1,28 @@
 
+import java.util.Scanner;
+
+
 //Edgar Rosa Rey
 //proyecto dia internacional programador
-//18-02-2021
+//24-02-2021 Monlau 
 
 
 public class Pzeller {
 
-
+static Scanner keyboard = new Scanner (System.in);
     public static void main(String[] args) {
-    int day=13,month=9, year=2021;
+       
+    int day=04,month=01, year=2001;
+    int ddmmyyyy;
+    System.out.println("birth day? ddmmyyy: ");
+    ddmmyyyy=keyboard.nextInt();
+
+        day=ddmmyyyy/1000000;
+        year=ddmmyyyy%10000;
+        month=(ddmmyyyy/10000)%100;
+        
     String stDat = birthDay_ZellerMonlau(day,month,year);
         System.out.println("International programmer's day: "+stDat+" sep2021");
-        
         
         
     }
